@@ -1,5 +1,5 @@
 var moedas = ['Real', 'Dolar', 'Euro', 'Libra'];
-var valordolar = [0.19,1,1.11,0.97];
+var valordolar = [0.19,1,0.97,1.12];
 let tipo_moeda1;
 let tipo_moeda2;
 let cont1; 
@@ -38,7 +38,6 @@ function identifica_primeira(){
      cont1 = i; 
      console.log(cont1); 
 
-     calcular();
     }
         
         
@@ -84,13 +83,14 @@ function calcular(){
 let valor2; 
 
 
-aux = quant1/valordolar[cont1];
+aux = quant1*valordolar[cont1];
 
 valor2 = aux/valordolar[cont2];
 
 console.log(valor2);
+console.log(quant1);
 
-document.getElementById('quant2').innerText = valor2; 
+document.getElementById('resultado').innerText = "Reultado:" + quant1 + " na moeda " + moedas[cont1]  + " equivale a " + valor2 + " na moeda " + moedas[cont2] ; 
 
 
 } 
